@@ -122,7 +122,7 @@ GROUP BY WEEK(wp.created_at);
 
 
 /*
-Request 1 from Morgan Rockwell (Website Manager) September 05, 2012
+Request 6 from Morgan Rockwell (Website Manager) September 05, 2012
 I’d like to understand where we lose our gsearch visitors between the new /lander-1 page and placing an order. Can you build us a 
 full conversion funnel, analyzing how many customers make it to each step? Start with /lander-1 and build the funnel all the way to 
 ourthank you page. Please use data since August 5th.
@@ -154,7 +154,7 @@ FROM (
 
 
 /*
-Request 1 from Cindy (CEO) November 10, 2012
+Request 7 from Cindy (CEO) November 10, 2012
 We tested an updated billing page based on your funnel analysis. Can you take a look and see whether /billing-2 is doing any better 
 than the original /billing page? We’re wondering what % of sessions on those pages end up placing an order. FYI – we ran this test 
 for all traffic, not just for our search visitors.
