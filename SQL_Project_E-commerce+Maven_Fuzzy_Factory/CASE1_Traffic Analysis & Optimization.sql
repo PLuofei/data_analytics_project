@@ -19,7 +19,7 @@ ORDER BY total_session DESC;
 
 
 /*
-Request 2 from Tom (Marketing Director) April 14, 2012
+Request 2 from Tom Parmesan (Marketing Director) April 14, 2012
 Sounds like gsearch nonbrand is our major traffic source, but we need to understand if those sessions are driving sales.
 Could you please calculate the conversion rate (CVR) from session to order? Based on what we're paying for clicks, we’ll 
 need a CVR of at least 4% to make the numbers work.If we're much lower, we’ll need to reduce bids. If we’re higher, we can 
@@ -38,7 +38,7 @@ AND utm_campaign = "nonbrand"
 
 
 /*
-Request 3 from Tom (Marketing Director) May 12, 2012 
+Request 3 from Tom Parmesan (Marketing Director) May 12, 2012 
 Based on your conversion rate analysis, we bid down gsearch nonbrand on 2012-04-15. Can you pull gsearch nonbrand trended session 
 volume, by week, to see if the bid changes have caused volume to drop at all?
 */ 
@@ -53,7 +53,7 @@ GROUP BY YEARWEEK(created_at);
 
 
 /*
-Request 4 from Tom (Marketing Director) May 11, 2012
+Request 4 from Tom Parmesan (Marketing Director) May 11, 2012
 I was trying to use our site on my mobile device the other day, and the experience was not great. Could you pull conversion rates 
 from session to order, by device type? If desktop performance is better than on mobile we may be able to bid up for desktop specifically 
 to get more volume?
@@ -72,7 +72,7 @@ ORDER BY CVR desc;
 
 
 /*
-Request 5 from Tom (Marketing Director) June 09, 2012
+Request 5 from Tom Parmesan (Marketing Director) June 09, 2012
 After your device-level analysis of conversion rates, we realized desktop was doing well, so we bid our gsearch nonbrand desktop 
 campaigns up on 2012-05-19. Could you pull weekly trends for both desktop and mobile so we can see the impact on volume? You can 
 use 2012-04-15 until the bid change as a baseline.
