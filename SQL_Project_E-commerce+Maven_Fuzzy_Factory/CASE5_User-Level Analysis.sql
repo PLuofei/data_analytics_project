@@ -9,19 +9,19 @@ Could you please pull data on how many of our website visitors come back for ano
 
 SELECT repeat_sessions, COUNT(DISTINCT user_id) AS users
 FROM(
-		SELECT t.user_id, 
-			   COUNT(DISTINCT w.website_session_id) AS repeat_sessions
-		FROM(
+	SELECT t.user_id, 
+	       COUNT(DISTINCT w.website_session_id) AS repeat_sessions
+	FROM(
 		SELECT *
 		FROM website_sessions
 		WHERE is_repeat_session = 0 
-			  AND created_at BETWEEN '2014-01-01' AND '2014-11-01'  -- 先把目标时间段有新的会话的用户跳出来
+		      AND created_at BETWEEN '2014-01-01' AND '2014-11-01'
 		) AS t
-		LEFT JOIN website_sessions w -- 不会减少，反而会增加，因为user_id是同事两边的主键
-		ON t.user_id = w.user_id
-			AND w.created_at BETWEEN '2014-01-01' AND '2014-11-01'  -- 先把目标时间段有新的会话的用户跳出来
-			AND w.is_repeat_session = 1
-		GROUP BY t.user_id
+	LEFT JOIN website_sessions w 
+	ON t.user_id = w.user_id
+	   AND w.created_at BETWEEN '2014-01-01' AND '2014-11-01'  
+           AND w.is_repeat_session = 1
+	GROUP BY t.user_id
 ) s
 GROUP BY repeat_sessions;
 
